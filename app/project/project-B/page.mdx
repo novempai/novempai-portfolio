@@ -1,0 +1,93 @@
+export const metadata = {
+  title: 'Image Comparison Component Demo',
+  description:
+    'Demonstrating the ImageComparison component with custom slider and interactive comparison between light and dark themes.',
+  alternates: {
+    canonical: '/project/project-B',
+  },
+};
+
+import {
+  ImageComparison,
+  ImageComparisonImage,
+  ImageComparisonSlider,
+} from '@/components/motion-primitives/image-comparison';
+
+# Image Comparison Component Demo
+
+This project demonstrates the usage of the ImageComparison component with a custom slider design. The component allows users to interactively compare two images by dragging a slider between them.
+
+---
+
+## Interactive Image Comparison
+
+Below is an example of the ImageComparison component showing the difference between dark and light themes of Motion Primitives:
+
+<ImageComparison className='aspect-16/10 w-full rounded-lg border border-zinc-200 dark:border-zinc-800'>
+  <ImageComparisonImage
+    src='/mp_dark.png'
+    alt='Motion Primitives Dark'
+    position='left'
+  />
+  <ImageComparisonImage
+    src='/mp_light.png'
+    alt='Motion Primitives Light'
+    position='right'
+  />
+  <ImageComparisonSlider className='w-2 bg-white/50 backdrop-blur-xs transition-colors hover:bg-white/80'>
+    <div className='absolute left-1/2 top-1/2 h-8 w-6 -translate-x-1/2 -translate-y-1/2 rounded-[4px] bg-white' />
+  </ImageComparisonSlider>
+</ImageComparison>
+
+---
+
+## Component Features
+
+The ImageComparison component includes:
+
+- **Responsive Design**: Adapts to different screen sizes with the `aspect-16/10` ratio
+- **Custom Styling**: Border styling that adapts to light/dark themes
+- **Interactive Slider**: Smooth drag interaction with visual feedback
+- **Accessibility**: Proper alt text for screen readers
+
+### Component Structure
+
+```jsx
+<ImageComparison className='aspect-16/10 w-full rounded-lg border border-zinc-200 dark:border-zinc-800'>
+  <ImageComparisonImage
+    src='/mp_dark.png'
+    alt='Motion Primitives Dark'
+    position='left'
+  />
+  <ImageComparisonImage
+    src='/mp_light.png'
+    alt='Motion Primitives Light'
+    position='right'
+  />
+  <ImageComparisonSlider className='w-2 bg-white/50 backdrop-blur-xs transition-colors hover:bg-white/80'>
+    <div className='absolute left-1/2 top-1/2 h-8 w-6 -translate-x-1/2 -translate-y-1/2 rounded-[4px] bg-white' />
+  </ImageComparisonSlider>
+</ImageComparison>
+```
+
+---
+
+## Usage Notes
+
+- The `ImageComparisonImage` components require `src`, `alt`, and `position` props
+- The `ImageComparisonSlider` can be customized with additional styling
+- The component supports both light and dark theme variations
+- Images are loaded from the `/public` directory
+
+---
+
+## Customization Options
+
+You can customize the slider appearance by modifying:
+
+- **Width**: Adjust the `w-2` class for slider thickness
+- **Background**: Change `bg-white/50` for different opacity levels
+- **Hover Effects**: Modify `hover:bg-white/80` for interaction feedback
+- **Handle Design**: Customize the inner div for different handle styles
+
+Try dragging the slider above to see the smooth transition between the two images!
