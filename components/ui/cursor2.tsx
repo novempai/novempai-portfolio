@@ -76,7 +76,7 @@ export function ProjectImageWithCursor({ imageSrc, imageAlt, cursorText }: Proje
   return (
     <div 
       ref={containerRef}
-      className='aspect-video overflow-hidden rounded-2xl bg-white shadow-md dark:bg-black relative cursor-none'
+      className='aspect-video rounded-2xl bg-white dark:bg-black relative cursor-none'
     >
       <AnimatePresence>
         {isHovered && (
