@@ -81,8 +81,8 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            As a user interface designer, I've over 5 years of experience in digital product design.
-            Focused on creating simple, intuitive and impactful digital experiences.
+            A digital product designer with over 5 years of experience, who believes design should be simple, intuitive, and meaningful. 
+            Working aross brand, product, and design systems. Born in Myanmar and now based in Thailand.  
           </p>
         </div>
       </motion.section>
