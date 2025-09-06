@@ -20,6 +20,12 @@
   }
 }
 
+@layer utilities {
+  .aspect-16\/10 {
+    aspect-ratio: 16 / 10;
+  }
+}
+
 :root {
   --sh-class: #7aa2f7;
   --sh-sign: #89ddff;
