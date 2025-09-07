@@ -33,30 +33,21 @@ export const PROJECTS: Project[] = [
   {
     name: 'AirBurma',
     description:
-      'A web platform designed to streamline and simplify the air ticket buying and selling process between customers and travel agents.',
+      'A flight ticket booking platform that connects travel agents and customers for easy, affordable bookings.',
     link: '/project/AirBurma',
-    image: '/airburma_cover.jpg',
+    image: '/AirBurma/Mockup-dashboard.jpg',
     cursorText: 'View Project',
     id: 'project1',
   },
   {
-    name: 'MEEC Website',
+    name: 'SarPhat',
     description:
-      'A community-driven effort to enhance earthquake resilience and structural integrity in Myanmar.',
-    link: '/project/project-A',
-    image: '/mp_dark.png',
-    cursorText: 'Explore MEEC',
-    id: 'project1',
-  },
-  {
-    name: 'AirBurma Web App',
-    description: 'A web application platform designed for travel agents to efficiently book flights across Asia.',
-    link: '/project/AirBurma',
-    image: '/airburma_cover.jpg',
+      'A space for youth to explore quality, knowledge-based content for personal growth and development.',
+    link: '/project/SarPhat',
+    image: '/SarPhat/sarphat-logo-bg-yellow.jpg',
     cursorText: 'View Project',
     id: 'project2',
-  },
-  
+  },  
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [

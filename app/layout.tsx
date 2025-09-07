@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   title: {
     default: 'Novem - UI/UX Designer',
-    template: '%s | Nim'
+    template: '%s'
   },
 };
 

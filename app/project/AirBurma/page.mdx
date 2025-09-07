@@ -1,117 +1,287 @@
 export const metadata = {
-  title: 'AirBurma Web Application',
+  title: 'AirBurma',
   description:
-    'Design and artificial intelligence (AI) are increasingly intertwined, driving innovation across industries. As technology evolves, the role of design engineering is more critical than ever, bridging creativity and functionality.',
+    'Flight ticket reselling platform connecting travel agents and customers for easy, affordable bookings.',
   alternates: {
-    canonical: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+    canonical: '/project/AirBurma',
   },
 };
 
-# A flight booking management platform designed for Travel Agencies 
+import {
+  ImageComparison,
+  ImageComparisonImage,
+  ImageComparisonSlider,
+} from '@/components/motion-primitives/image-comparison';
+import {
+  MorphingImageDialog,
+} from '@/components/ui/morphing-image-dialog';
 
-AirBurma is a digital platform designed to enhance the core competencies and support the professional growth of travel agency staff.
+# AirBurma: A flight ticket reselling platform connecting travel agents and customers for easy, affordable bookings. 
 
-In developing the digital platform, the UX design team’s primary responsibilities were comprised of two challenges...
+In 2024, a U.S.-based client and former IBM Software Engineer asked me to design an air ticket reselling platform focused on Myanmar.
 
-
-<Cover
-  src="/AirBurma-IMG01.jpg"
-  alt="Dashboard UI design from AirBurma web app"
-  caption=""
+<MorphingImageDialog
+  className="cursor-zoom-in"
+  type="single"
+  src="/AirBurma/Mockup-dashboard.jpg"
+  alt="Dashboard UI Mockup"
+  trigger={
+    <img 
+      src="/AirBurma/Mockup-dashboard.jpg" 
+      alt="Dashboard UI Mockup" 
+      className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 object-cover"
+    />
+  }
 />
 
-## The Evolving Role of AI in Design
+In Myanmar, air ticket booking is often handled manually through chat apps like Viber or Messenger. A customer sends a message to an agent, asking for the cheapest or most convenient flight. The agent then requests details such as dates, destinations, and passenger information. Afterward, the agent manually searches across multiple websites to find options and shares them back with the customer through chat.
 
-AI is no longer just a backend tool—it’s becoming an active collaborator in the creative process. From generating design ideas to optimizing layouts, AI offers endless possibilities. For instance:
+While this process works, it is repetitive, inefficient, and prone to delays. The client envisioned a web app solution to streamline this manual workflow into a structured and reliable digital platform — turning a startup idea into a scalable product.
 
-- **Generative Design**: AI algorithms can generate thousands of design variations based on constraints, helping designers explore ideas faster.
-- **User Experience Optimization**: AI analyzes user behavior to suggest improvements, enabling data-driven design decisions.
-- **Automation**: Repetitive tasks like resizing assets or formatting layouts can be automated, freeing up designers for more strategic work.
+> To comply with my confidentiality agreement, I have omitted confidential information. These designs are reinterpretations of the original.
 
-<Cover
-  src="/AirBurma-IMG02.jpg"
-  alt="Search flight UI design from AirBurma web app"
-  caption="Search flight UI page"
+- **Client**: ATS
+- **Contribution**: User Interface, Design System
+- **Timeline**: June 2024 — Nov 2024
+
+---
+
+
+# The challenge
+
+The client clearly outlined his vision and expectations for the project:
+
+- **User Stories as Blueprint**: The client provided a prioritized list of MVP features and user stories. My task was to translate these into clear user flows, leverage proven design patterns, and craft tailored UI solutions for the platform.
+- **Using Carbon Design System**: With prior experience in IBM’s ecosystem, the client requested that the platform use the Carbon Design System.
+- **Focus on Backbone Structure**: The aim was to build a robust foundation, not a feature-complete product. The MVP needed to be systematic, scalable, and grounded in a design system approach from day one.
+
+---
+
+# The approach
+
+## Research & competitive analysis
+
+<MorphingImageDialog
+  className="cursor-zoom-in"
+  type="single"
+  src="/AirBurma/Mockup-dashboard.jpg"
+  alt="Dashboard UI Mockup"
+  trigger={
+    <img 
+      src="/AirBurma/Mockup-dashboard.jpg" 
+      alt="Dashboard UI Mockup" 
+      className="aspect-video w-full rounded-lg border border-zinc-200 dark:border-zinc-800 object-cover"
+    />
+  }
 />
 
-## Challenges and Opportunities
+Since the MVP was focused on backbone structure, I conducted competitive analysis by studying leading platforms such as Expedia and Booking.com. I focused on how their booking flows, checkout processes, and information hierarchy worked, and analyzed how these could be adapted for AirBurma’s context.
 
-While AI empowers designers, it also raises challenges:
+Key insights:
 
-### Challenges
+- **Simplified Search Experience**: Progressive disclosure for filters prevents overwhelming new users.
+- **Transparency in Information**: Important details like baggage allowance, refund policies, and pricing must be visible upfront.
+- **Checkout Clarity**: Step indicators and transparent breakdowns increase trust in the platform.
 
-- **Ethical Design**: AI systems may unintentionally reinforce biases. Designers must ensure inclusivity and fairness.
-- **Loss of Control**: Relying too heavily on AI can dilute the human touch in design.
-- **Learning Curve**: Integrating AI tools requires new skills, which can be daunting for some designers.
+These findings became design guidelines for AirBurma MVP.
 
-### Opportunities
+## Learning Carbon Design System
 
-- **Enhanced Creativity**: AI can inspire by offering unconventional ideas.
-- **Efficiency Gains**: Automation allows for rapid iteration and prototyping.
-- **Scalability**: AI enables personalized experiences at scale, a growing demand in today’s market.
+Before jumping into adopting Carbon, it was important to spend time learning about and getting comfortable with Carbon.
 
----
+<MorphingImageDialog
+  className="cursor-zoom-in"
+  type="single"
+  src="/AirBurma/ibm-components.gif"
+  alt="IBM Components"
+  trigger={
+    <img 
+      src="/AirBurma/ibm-components.gif" 
+      alt="IBM Components" 
+      className="aspect-video w-full rounded-lg border border-zinc-200 dark:border-zinc-800 object-cover"
+    />
+  }
+/>
 
-## Design Engineering: The Glue Between Creativity and Execution
+As a designer primarily experienced with other design systems, adopting Carbon presented both technical and conceptual challenges. The client’s IBM background meant authenticity in implementation was crucial — surface-level familiarity wouldn’t suffice.
 
-Design engineering ensures that the gap between creative vision and technical execution is seamless. It combines the artistry of design with the precision of engineering.
+### Understanding IBM Design Language
 
-### Key Principles of Design Engineering
+Carbon isn’t just a component library; it reflects IBM Design Language. I spent time studying the underlying principles: systematic approach to typography, purposeful use of spacing, and emphasis on accessibility.
 
-1. **Systems Thinking**: Viewing a design holistically ensures all components work together cohesively.
-2. **Collaboration**: Effective communication between designers and developers is crucial for successful outcomes.
-3. **Iterative Process**: Building, testing, and refining are fundamental to achieving the best results.
+This foundational understanding proved more valuable than memorizing component specifications.
 
-> "Good design is as little design as possible." — Dieter Rams
-
-### Tools of the Trade
-
-Modern design engineers leverage tools like:
-
-- **Figma** and **Sketch** for prototyping
-- **Motion** for creating smooth animations
-- **Tailwind CSS** for streamlined styling
-- **Git** for version control and collaboration
-
----
-
-## AI and Design Engineering: A Symbiotic Relationship
-
-The integration of AI into design engineering creates powerful synergies:
-
-- **Prototyping with AI**: AI-driven tools like ChatGPT assist in generating content for prototypes, accelerating the design process.
-- **Predictive Analytics**: Engineers use AI to predict performance issues and optimize designs in real-time.
-- **Accessibility Improvements**: AI tools automatically detect and fix accessibility concerns, ensuring compliance.
-
-### Case Study: Motion-Primitives
-
-Motion-Primitives demonstrates how AI and design engineering come together. By leveraging Framer Motion and Tailwind CSS, it simplifies the creation of dynamic, responsive interfaces. AI can enhance this by:
-
-- Generating motion patterns based on user preferences.
-- Optimizing performance for different devices.
-- Automating testing for cross-browser compatibility.
+<MorphingImageDialog
+  className="cursor-zoom-in"
+  type="single"
+  src="/AirBurma/ibm-date-range-picker.gif"
+  alt="IBM Date Range Picker"
+  trigger={
+    <img 
+      src="/AirBurma/ibm-date-range-picker.gif" 
+      alt="IBM Date Range Picker" 
+      className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 object-cover"
+    />
+  }
+/>
 
 ---
 
-## Conclusion
+## Developing design patterns
 
-The intersection of AI, design, and design engineering is reshaping the industry. By embracing AI while staying grounded in design principles, professionals can push boundaries and create experiences that are both innovative and human-centered. The future lies in collaboration—not only between humans and machines but also among designers, engineers, and AI.
+Starting with user stories provided by the client, I created lightweight user flows mapping key journeys across the platform. These flows established the foundational structure before developing detailed interaction patterns. Using the chatbot pattern as an example of my systematic approach:
+
+### Mapping chatbot pattern
+
+The chatbot pattern lets users ask questions and receive helpful, reliable, and timely responses on demand.
+
+<MorphingImageDialog
+  className="cursor-zoom-in"
+  type="single"
+  src="/AirBurma/chatbot-flow.png"
+  alt="Chatbot flow"
+  trigger={
+    <img 
+      src="/AirBurma/chatbot-flow.png" 
+      alt="Chatbot flow" 
+      className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 object-cover"
+    />
+  }
+/>
+
+This foundational flow guided the development of detailed interface patterns that bridge Myanmar’s familiar chat culture with efficient digital experiences.
+
+From this conceptual framework, I created specific UI implementations addressing different user scenarios:
+
+### Chatbot UI flows
+
+<MorphingImageDialog
+  className="cursor-zoom-in"
+  type="single"
+  src="/AirBurma/chatbot-launching-a-bot.png"
+  alt="Chatbot flow 01"
+  trigger={
+    <img 
+      src="/AirBurma/chatbot-launching-a-bot.png" 
+      alt="Chatbot flow 01" 
+      className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 object-cover"
+    />
+  }
+/>
+
+Clicking the chat icon activates the AirBurma Bot, opening a chat window for instant flight support.
+
+<MorphingImageDialog
+  className="cursor-zoom-in"
+  type="single"
+  src="/AirBurma/chatbot-full-view.png"
+  alt="Chatbot flow 02"
+  trigger={
+    <img 
+      src="/AirBurma/chatbot-full-view.png" 
+      alt="Chatbot flow 02" 
+      className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 object-cover"
+    />
+  }
+/>
+
+Switching to full-screen mode gives users a larger, focused chat interface for easier conversation and quick access to support options.
+
+<MorphingImageDialog
+  className="cursor-zoom-in"
+  type="single"
+  src="/AirBurma/chatbot-bot-handoff.png"
+  alt="Chatbot flow 03"
+  trigger={
+    <img 
+      src="/AirBurma/chatbot-bot-handoff.png" 
+      alt="Chatbot flow 03" 
+      className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 object-cover"
+    />
+  }
+/>
+
+The bot connects users to a human assistant when personal help is needed, making support seamless and responsive.
+
+<MorphingImageDialog
+  className="cursor-zoom-in"
+  type="single"
+  src="/AirBurma/chatbot-04.png"
+  alt="Chatbot flow 04"
+  trigger={
+    <img 
+      src="/AirBurma/chatbot-04.png" 
+      alt="Chatbot flow 04" 
+      className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 object-cover"
+    />
+  }
+/>
+
+Users can upload files directly in chat whenever needed, making it easy to share documents for ticket cancellation or other services.
+
+<MorphingImageDialog
+  className="cursor-zoom-in"
+  type="single"
+  src="/AirBurma/chatbot-anatomy.png"
+  alt="Chatbot anatomy"
+  trigger={
+    <img 
+      src="/AirBurma/chatbot-anatomy.png" 
+      alt="Chatbot anatomy" 
+      className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 object-cover"
+    />
+  }
+/>
+
+Breaking down interface components for optimal user experience.
+
+This chatbot pattern ensures consistent conversational experiences across all touchpoint while preserving the personal service approach that Myanmar customers value in their traditional booking process.
 
 ---
 
-### Questions for Reflection
+## Adapting to Carbon
 
-- How can we ensure AI remains a tool for empowerment rather than replacement?
-- What steps can design engineers take to integrate AI responsibly into their workflows?
+Implementing Carbon would make the interface more clear, meaning users would no longer get lost in the flow and would be able to find what they needed. It would also align key pages before, during, and after the booking process. I hypothesized that as a result, users would be less likely to defect.
 
-### Further Reading
+<MorphingImageDialog
+  className="cursor-zoom-in"
+  type="single"
+  src="/AirBurma/Mockup-flight-search02.jpg"
+  alt="Flight-search UI Mockup"
+  trigger={
+    <img 
+      src="/AirBurma/Mockup-flight-search02.jpg" 
+      alt="Flight-search UI Mockup" 
+      className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 object-cover"
+    />
+  }
+/>
 
-- [Designing for AI](https://example.com/designing-for-ai)
-- [The Future of Design Systems](https://example.com/future-design-systems)
-- [Ethical AI Guidelines](https://example.com/ethical-ai)
+While implementing Carbon components and aligning to the IBM Design Language, I broke down the essential elements of the platform into re-usable components, and combined them together to develop the most important pages (dashboard, flight detail, checkout).
+
+<MorphingImageDialog
+  className="cursor-zoom-in"
+  type="single"
+  src="/AirBurma/components.jpg"
+  alt="Custom components"
+  trigger={
+    <img 
+      src="/AirBurma/components.jpg" 
+      alt="Custom components" 
+      className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 object-cover"
+    />
+  }
+/>
+
+Consumer design systems often prioritize visual impact; Carbon emphasizes consistency and scalability. This shift influenced my design decisions throughout the project, teaching me to balance visual appeal with systematic rigor — a valuable skill for enterprise product design.
+
+This learning process reinforced that mastering a design system requires understanding its underlying philosophy, not just its visual components.
 
 ---
 
-### Music for Inspiration
+# Conclusion
 
-Listening to music while working? Check out _"Motion"_ by Tycho—a perfect blend of creativity and rhythm.
+After about five months of learning, research, ideation, and crafting through multiple iterations, the project delivered a well-structured MVP for an air ticket reselling platform, grounded in a systematic design approach with the Carbon Design System.
+
+The design system approach enabled rapid development and easy future enhancements. As a result, the solution streamlined manual booking processes, improved user experience, and positioned AirBurma for future growth.
+
