@@ -44,6 +44,7 @@ function MagneticSocialLink({
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
       <a
         href={link}
+        target="_blank"
         className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-2.5 py-1 text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
       >
         {children}
@@ -84,6 +85,11 @@ export default function Personal() {
             A digital product designer with over 5 years of experience, who believes design should be simple, intuitive, and meaningful. 
             Working aross brand, product, and design systems. Born in Myanmar and now based in Thailand.  
           </p>
+          <div className="flex items-center space-x-3 mt-6">
+            <MagneticSocialLink link="https://drive.google.com/file/d/1FlcmX3d-GgI2x_DURIYWIB0mLTmRCyob/view?usp=drive_link">
+              View my Resume
+            </MagneticSocialLink>
+          </div>
         </div>
       </motion.section>
 
