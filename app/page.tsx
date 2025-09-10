@@ -83,7 +83,7 @@ export default function Personal() {
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
             A digital product designer with over 5 years of experience, who believes design should be simple, intuitive, and meaningful. 
-            Working aross brand, product, and design systems. Born in Myanmar and now based in Thailand.  
+            Working across brand, product, and design systems. Born in Myanmar and now based in Thailand.  
           </p>
           <div className="flex items-center space-x-3 mt-6">
             <MagneticSocialLink link="https://drive.google.com/file/d/1FlcmX3d-GgI2x_DURIYWIB0mLTmRCyob/view?usp=drive_link">
