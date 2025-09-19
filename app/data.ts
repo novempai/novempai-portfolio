@@ -56,7 +56,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'UI/UX Designer',
     start: '2024',
     end: 'Present',
-    link: 'https://novempai.vercel.app/',
+    link: '',
     id: 'work1',
   },
   {
@@ -64,7 +64,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Lead UI/UX Designer',
     start: '2022',
     end: '2024',
-    link: 'https://digitalbase.com.mm',
+    link: '',
     id: 'work2',
   },
   {
@@ -72,7 +72,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'UI/UX Designer',
     start: '2020',
     end: '2024',
-    link: 'https://nexcode.com.mm',
+    link: '',
     id: 'work3',
   },
 ]
