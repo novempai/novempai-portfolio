@@ -56,7 +56,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'UI/UX Designer',
     start: '2024',
     end: 'Present',
-    link: 'https://novempai-portfolio.vercel.app/',
+    link: 'https://novempai.vercel.app/',
     id: 'work1',
   },
   {
