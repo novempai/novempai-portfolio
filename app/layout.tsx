@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: '/'
   },
   title: {
-    default: 'Novem - UI/UX Designer',
+    default: 'Novem - UI Designer',
     template: '%s'
   },
 };

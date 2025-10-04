@@ -87,7 +87,7 @@ export default function Personal() {
           </p>
           <div className="flex items-center space-x-3 mt-6">
             <MagneticSocialLink link="https://drive.google.com/file/d/1FlcmX3d-GgI2x_DURIYWIB0mLTmRCyob/view?usp=drive_link">
-              View Resume
+              View my Resume
             </MagneticSocialLink>
           </div>
         </div>
