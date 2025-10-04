@@ -73,7 +73,7 @@ export function Footer() {
         <a href="https://novempai.vercel.app/" target="_blank">
           <TextLoop className="text-xs text-zinc-500">
             <span>© 2025 Novem.</span>
-            <span>Updated Sep 2025</span>
+            <span>Updated Oct 2025</span>
           </TextLoop>
         </a>
         <div className="text-xs text-zinc-400">
